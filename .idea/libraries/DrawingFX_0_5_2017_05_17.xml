@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="DrawingFX 0.5 2017-05-17">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../DrawingFX 0.5 2017-05-17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../DrawingFX 0.5 2017-05-17.jar!/src" />
+    </SOURCES>
+  </library>
+</component>
