@@ -30,7 +30,8 @@ public class SolarSystem implements Drawing {
 
     Integer lineWidth = 1;
 
-    Boolean lineVisible = true;
+    Boolean pathVisible = true;
+    Boolean lineVisible = false;
 
     @Override
     public void draw(View view) {
@@ -40,18 +41,22 @@ public class SolarSystem implements Drawing {
         Vector p2 = Vector.polar(l2, phi2);
         Vector p3 = Vector.polar(l3, phi3);
 
-        if (!lineVisible) {
-            lineWidth = 0;
-        } else {
-            lineWidth = 1;
+        view.setStroke(Color.GRAY);
+        view.setLineWidth(lineWidth);
+
+        if (lineVisible) {
+            // Drawing lines
+            view.strokeLine(p0, p1);
+            view.strokeLine(p0, p2);
+            view.strokeLine(p0, p3);
         }
 
-        // Drawing lines
-        view.setStroke(Color.WHITE);
-        view.setLineWidth(lineWidth);
-        view.strokeLine(p0, p1);
-        view.strokeLine(p0, p2);
-        view.strokeLine(p0, p3);
+        if (pathVisible) {
+            // Drawing path
+            view.strokeCircleCentered(p0, l1);
+            view.strokeCircleCentered(p0, l2);
+            view.strokeCircleCentered(p0, l3);
+        }
 
         // Drawing circles
         view.setFill(Color.hsb(45, 1, 1));
