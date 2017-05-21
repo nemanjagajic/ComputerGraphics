@@ -46,11 +46,13 @@ public class SolarSystem implements Drawing {
 
         if (lineVisible) {
             // Drawing lines
+            view.setLineDashes(4);
             view.strokeLine(p0, p1);
             view.strokeLine(p0, p2);
             view.strokeLine(p0, p3);
         }
 
+        view.setLineDashes(0);
         if (pathVisible) {
             // Drawing path
             view.strokeCircleCentered(p0, l1);
