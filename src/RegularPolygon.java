@@ -3,6 +3,7 @@ import mars.drawingx.drawing.Drawing;
 import mars.drawingx.drawing.DrawingUtils;
 import mars.drawingx.drawing.View;
 import mars.drawingx.gadgets.annotations.GadgetDouble;
+import mars.drawingx.gadgets.annotations.GadgetInteger;
 import mars.geometry.Vector;
 
 public class RegularPolygon implements Drawing {
