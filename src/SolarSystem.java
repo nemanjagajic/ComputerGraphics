@@ -77,4 +77,5 @@ public class SolarSystem implements Drawing {
     public static void main(String[] args) {
         Drawing.launch(700, 700);
     }
+
 }
