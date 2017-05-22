@@ -57,7 +57,7 @@ public class MorphingAndKeyframes implements Drawing {
             }
         }
 
-        int k0 = (int)(time / stateDuration) % nStates; // this state
+        int k0 = (int)(time / stateDuration) % nStates; // current state
         int k1 = (k0 + 1) % nStates; // next state
 
         double t = time % stateDuration;
