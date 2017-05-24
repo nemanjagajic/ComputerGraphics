@@ -6,6 +6,7 @@ import mars.drawingx.drawing.Drawing;
 import mars.drawingx.drawing.DrawingUtils;
 import mars.drawingx.drawing.View;
 import mars.drawingx.gadgets.annotations.GadgetAnimation;
+import mars.drawingx.gadgets.annotations.GadgetBoolean;
 import mars.geometry.Vector;
 
 public class JumpingBallsTicks implements Drawing {
@@ -23,6 +24,9 @@ public class JumpingBallsTicks implements Drawing {
 
     double timeTickInterval = 0.001;
     Vector g = new Vector(0, -500);
+
+    @GadgetBoolean
+    Boolean showVelocities = false;
 
     private class Ball {
         double t;
@@ -77,6 +81,10 @@ public class JumpingBallsTicks implements Drawing {
 
             view.setFill(c);
             view.fillCircleCentered(p, r);
+
+            view.setStroke(Color.GRAY);
+            if (showVelocities)
+                DrawingUtils.drawArrow(view, p, v.mul(0.3));
         }
 
     }
